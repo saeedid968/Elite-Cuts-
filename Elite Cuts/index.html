@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elite Cuts - Premium Barber Shop</title>
+    <link rel="shortcut icon" href="./img/Barbershop-Logo-SVGEPSPNG-Graphics-17807608-1-1-580x387-modified.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar py-3 navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Elite Cuts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gallery/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./book now/booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-slide"
+                        style="background-image: url('https://images.unsplash.com/photo-1592647420148-bfcc177e2117?q=80&w=1439&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                        <div class="container">
+                            <div class="row min-vh-100 align-items-center">
+                                <div class="col-lg-6">
+                                    <h1 class="display-4 fw-bold text-white mb-4">Experience Premium Grooming</h1>
+                                    <p class="lead text-white mb-4">Where style meets elegance. Your perfect look
+                                        starts here.</p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="hero-btn"><span>Schedule an
+                                                Appointment</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-slide"
+                        style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                        <div class="container">
+                            <div class="row min-vh-100 align-items-center">
+                                <div class="col-lg-6">
+                                    <h1 class="display-4 fw-bold text-white mb-4">Master Barbers at Your Service</h1>
+                                    <p class="lead text-white mb-4">Expert hands crafting your signature style with
+                                        precision.</p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="hero-btn"><span>Schedule an
+                                                Appointment</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-slide"
+                        style="background-image: url('https://images.unsplash.com/photo-1672642150048-fbfa1634804f?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+                        <div class="container">
+                            <div class="row min-vh-100 align-items-center">
+                                <div class="col-lg-6">
+                                    <h1 class="display-4 fw-bold text-white mb-4">Luxury Grooming Experience</h1>
+                                    <p class="lead text-white mb-4">Indulge in our premium services and leave feeling
+                                        refreshed.</p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="hero-btn"><span>Schedule an
+                                                Appointment</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <!-- Services Preview Section -->
+    <section id="serviceSection">
+        <div class="container-fluid">
+            <h2 class="text-center">Our Services</h2>
+            <div class="heading-line"></div>
+
+            <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+                <div id="serviceCarousel1" class="carousel-inner">
+
+                    <!-- First Slide -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+                            <!-- Card 1 -->
+                            <div class="card service-card text-light" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1541533848490-bc8115cd6522?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top" alt="Beard Trim">
+                                <div class="card-body">
+                                    <h5 class="card-title">Haircut & Styling</h5>
+                                    <p class="card-text">Professional haircut and styling services tailored to your
+                                        preferences.
+                                    </p>
+                                    <p class="card-price">Starting at Rs <b>450</b> </p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="servicebtn"><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="card service-card text-light" style="width: 18rem;">
+                                <img src="https://plus.unsplash.com/premium_photo-1677444546740-7092c86ac54d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjF8fGhhaXJjdXR8ZW58MHx8MHx8fDA%3D"
+                                    class="card-img-top" alt="Beard Trim">
+                                <div class="card-body">
+                                    <h5 class="card-title">Beard Trim</h5>
+                                    <p class="card-text">Expert beard trimming and shaping to maintain your perfect
+                                        look.
+                                    </p>
+                                    <p class="card-price">Starting at Rs <b>200</b> </p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="servicebtn"><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="card service-card text-light" style="width: 18rem;">
+                                <img src="https://images.pexels.com/photos/6007400/pexels-photo-6007400.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                    class="card-img-top" alt="Beard Trim">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hot Towel Shave</h5>
+                                    <p class="card-text">Enjoy a traditional hot towel shave for the ultimate, luxurious
+                                        grooming experience today.
+                                    </p>
+                                    <p class="card-price">Starting at <b>350</b> </p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="servicebtn"><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center gap-4 flex-wrap">
+                            <div class="card service-card text-light" style="width: 18rem;">
+                                <img src="https://img.freepik.com/free-photo/female-therapist-washing-face-male-customer-while-giving-facial-spa_662251-2556.jpg?ga=GA1.1.590208923.1735546081&semt=ais_hybrid&w=740"
+                                    class="card-img-top" alt="Beard Trim">
+                                <div class="card-body">
+                                    <h5 class="card-title">Facial Treatment</h5>
+                                    <p class="card-text">Rejuvenate your skin with a deep cleansing facial tailored for
+                                        men's skin care needs.
+                                    </p>
+                                    <p class="card-price">Starting at Rs <b>1600</b> </p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="servicebtn"><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+
+
+                            <!-- Card 5 -->
+                            <div class="card service-card text-light" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1654741606596-83da03495e61?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top" alt="Beard Trim">
+                                <div class="card-body">
+                                    <h5 class="card-title">Scalp Massage</h5>
+                                    <p class="card-text">Refresh your hair and relax your mind with a deep cleanse and
+                                        soothing scalp massage.
+                                    </p>
+                                    <p class="card-price">Starting at Rs <b>150</b> </p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="servicebtn"><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+
+
+                            <!-- Card 6 -->
+                            <div class="card service-card text-light" style="width: 18rem;">
+                                <img src="https://images.unsplash.com/photo-1695173122226-3a932002ab33?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    class="card-img-top" alt="Beard Trim">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hair Color & Highlights</h5>
+                                    <p class="card-text">Add depth and personality to your style with professional hair
+                                        coloring and highlights.
+                                    </p>
+                                    <p class="card-price">Starting at Rs <b>2500</b> </p>
+                                    <a href="./book now/booking.html#appointmentform"><button class="servicebtn"><span>Book Now</span></button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Controls -->
+                <button id="serviceNextBtn" class="carousel-control-prev" type="button"
+                    data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button id="servicePreBtn" class="carousel-control-next" type="button" data-bs-target="#serviceCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section class="team" id="team">
+        <div class="container" id="teamcontainer">
+            <h2>Meet Our Barbers</h2>
+            <div class="heading-line"></div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image"><img
+                            src="https://images.unsplash.com/photo-1637589274892-9bc2d5200eab?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""></div>
+                    <h3>Muhammad Faiz</h3>
+                    <p class="barberstatus">Master Barber</p>
+                    <p class="bio">15+ years of experience in classic and modern cuts</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image"><img
+                            src="https://images.unsplash.com/photo-1569128782402-d1ec3d0c1b1b?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""></div>
+                    <h3>Saad Aslam</h3>
+                    <p class="barberstatus">Senior Barber</p>
+                    <p class="bio">Specialist in modern fades and beard styling</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-image"><img
+                            src="https://images.unsplash.com/photo-1641973552985-6b6a09d0017b?q=80&w=1325&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt=""></div>
+                    <h3>Raja Asif</h3>
+                    <p class="barberstatus">Style Expert</p>
+                    <p class="bio">Trained in Europe, specializing in trending styles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div id="testiContainer" class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="heading-line"></div>
+            <div class="testimonials-slider">
+                <div class="testimonial fade-in">
+                    <p>"Best haircut I've ever had. The attention to detail is amazing!"</p>
+                    <cite>- Saeed Ahmed</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Great atmosphere and even better service. Highly recommended!"</p>
+                    <cite>- Rizwan Lala</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"These guys know what they're doing. Won't go anywhere else!"</p>
+                    <cite>- Wajid Laghari</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contactSection">
+        <div id="contactContainer" class="container">
+            <div class="row mb-5">
+                <h1 class="text-center mb-4">Visit Us</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Contact Info</h2>
+                    <p><strong>Address:</strong> Main Branch: Shop #12, Al-Habib Commercial Plaza, Gulshan-e-Iqbal,
+                        Block 10-A, Karachi.
+
+                    </p>
+                    <p><strong>Phone:</strong> +923152621733</p>
+                    <p><strong>Email:</strong> saeedid968@gmail.com</p>
+                    <p><strong>Hours:</strong> Mon-Sat: 9am-7pm, Sun: Closed</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3776857733513!2d67.07397157534878!3d24.850237246135932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e893e43a7b1%3A0xfaa5d0a621505a91!2sGulshan-e-Iqbal%20Block%2010-A%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1686143271246!5m2!1sen!2sus"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footerContainer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Elite Cuts</h3>
+                    <p>Premium Barber Shop</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="./services/services.html">Services</a></li>
+                        <li><a href="./gallery/gallery.html">Gallery</a></li>
+                        <li><a href="./about/about.html">About</a></li>
+                        <li><a href="./book now/booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 Elite Cuts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loading.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          if (window.innerWidth <= 767) {
+            const carousels = document.querySelectorAll('.carousel');
+            carousels.forEach(carousel => {
+              let carouselInstance = bootstrap.Carousel.getInstance(carousel);
+              if (carouselInstance) {
+                carouselInstance.pause();
+              } else {
+                // If not initialized yet
+                new bootstrap.Carousel(carousel, {
+                  interval: false,
+                  ride: false,
+                  pause: true,
+                  wrap: false
+                });
+              }
+            });
+          }
+        });
+      </script>      
+</body>
+
+</html>

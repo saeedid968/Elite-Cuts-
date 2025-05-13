@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment - Elite Cuts</title>
+    <link rel="shortcut icon" href="../img/Barbershop-Logo-SVGEPSPNG-Graphics-17807608-1-1-580x387-modified.png"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar py-3 navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Elite Cuts</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../services/services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../gallery/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="../book now/booking.html">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Booking Header -->
+
+    <section class="booking-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4">Reserve Your Transformation</h1>
+                    <p class="lead">Your new style awaits. Book your personalized grooming session at Elite Cuts now!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Booking Form -->
+    <section class="py-5 booking-form-section" id="appointmentform">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg border-0">
+                        <div class="card-body p-5">
+                            <h2 class="text-center mb-4">Book Your Appointment</h2>
+                            <form id="bookingForm">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control form-control-lg" id="name"
+                                        placeholder="Enter your full name" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg" id="email"
+                                        placeholder="Enter your email address" required>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control form-control-lg" id="phone"
+                                        placeholder="Enter your phone number" required>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-4">
+                                        <label for="date" class="form-label">Preferred Date</label>
+                                        <input type="date" class="form-control form-control-lg" id="date" required>
+                                    </div>
+                                    <div class="col-md-6 mb-4">
+                                        <label for="time" class="form-label">Preferred Time</label>
+                                        <select class="form-select form-select-lg" id="time" required>
+                                            <option value="">Select a time</option>
+                                            <option value="10:00">10:00 AM</option>
+                                            <option value="11:00">11:00 AM</option>
+                                            <option value="12:00">12:00 PM</option>
+                                            <option value="13:00">1:00 PM</option>
+                                            <option value="16:00">4:00 PM</option>
+                                            <option value="17:00">5:00 PM</option>
+                                            <option value="18:00">6:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="service" class="form-label">Service</label>
+                                    <select class="form-select form-select-lg" id="service" required>
+                                        <option value="">Select a service</option>
+                                        <option value="classic-haircut">Haircut & Styling</option>
+                                        <option value="premium-haircut">Premium Haircut</option>
+                                        <option value="beard-trim">Beard Trim</option>
+                                        <option value="hot-towel-shave">Hot Towel Shave</option>
+                                        <option value="royal-treatment">Royal Treatment</option>
+                                        <option value="executive-package">Executive Package</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="barber" class="form-label">Preferred Barber (Optional)</label>
+                                    <select class="form-select form-select-lg" id="barber">
+                                        <option value="">Any Barber</option>
+                                        <option value="faiz">Muhammad Faiz</option>
+                                        <option value="saad">Saad Aslam</option>
+                                        <option value="asif">Raja Asif</option>
+                                        <option value="saud">Saud Mirza</option>
+                                        <option value="khan">Kamran Khan</option>
+                                        <option value="sameer">Sameer Muneer</option>
+                                    </select>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="notes" class="form-label">Additional Notes</label>
+                                    <textarea class="form-control form-control-lg" id="notes" rows="4"
+                                        placeholder="Add any special requests or notes"></textarea>
+                                </div>
+                                <div class="d-grid">
+                                    <button type="submit" class="hero-btn"><span>Book Appointment</span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contactSection">
+        <div id="contactContainer" class="container">
+
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2 class="mb-4">Contact Info</h2>
+                    <p><strong>Address:</strong> Main Branch: Shop #12, Al-Habib Commercial Plaza, Gulshan-e-Iqbal,
+                        Block 10-A, Karachi.
+
+                    </p>
+                    <p><strong>Phone:</strong> +923152621733</p>
+                    <p><strong>Email:</strong> saeedid968@gmail.com</p>
+                    <p><strong>Hours:</strong> Mon-Sat: 9am-7pm, Sun: Closed</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.3776857733513!2d67.07397157534878!3d24.850237246135932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e893e43a7b1%3A0xfaa5d0a621505a91!2sGulshan-e-Iqbal%20Block%2010-A%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2sus!4v1686143271246!5m2!1sen!2sus"
+                            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footerContainer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Elite Cuts</h3>
+                    <p>Premium Barber Shop</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../services/services.html">Services</a></li>
+                        <li><a href="../gallery/gallery.html">Gallery</a></li>
+                        <li><a href="../about/about.html">About</a></li>
+                        <li><a href="../book now/booking.html">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright &copy; 2024 Elite Cuts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
